@@ -1,0 +1,36 @@
+---
+layout: single
+---
+<article class="doctor-page">
+  {% if page.photo %}
+  <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}" class="doctor-photo">
+  {% endif %}
+
+  {% if page.credentials %}
+  <p class="doctor-credentials">{{ page.credentials }}</p>
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.specialties %}
+  <h2>Specialties</h2>
+  <ul>
+    {% for s in page.specialties %}<li>{{ s }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": {{ page.title | jsonify }},
+  "medicalSpecialty": {{ page.specialties | jsonify }},
+  "description": {{ page.excerpt | strip_html | jsonify }},
+  "worksFor": {
+    "@type": "MedicalClinic",
+    "name": "{{ site.clinic.legal_name }}"
+  },
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>

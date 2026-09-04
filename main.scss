@@ -1,0 +1,54 @@
+---
+# Front matter required so Jekyll/Sass processes this file
+---
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+.emergency-banner {
+  background: #b02a2a;
+  color: #fff;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}
+
+.faq-block {
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+
+  .faq-item {
+    margin-bottom: 1.25em;
+
+    h3 {
+      font-size: 1.05em;
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+.short-answer {
+  background: #f4f7fb;
+  border-left: 4px solid #2a6fb0;
+  padding: 0.75em 1em;
+  margin-bottom: 1.5em;
+}
+
+.case-disclaimer {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 1.5em;
+}
+
+.case-meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 1em;
+}

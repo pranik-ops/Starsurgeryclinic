@@ -1,0 +1,31 @@
+---
+layout: single
+---
+<article class="case-study">
+  <p class="case-meta">
+    {% if page.patient_age_range %}Patient: {{ page.patient_age_range }}{% endif %}
+    {% if page.condition %} · Condition: <a href="{{ page.condition_url | relative_url }}">{{ page.condition }}</a>{% endif %}
+    {% if page.doctor %} · Treating physician: <a href="{{ page.doctor_url | relative_url }}">{{ page.doctor }}</a>{% endif %}
+  </p>
+
+  {{ content }}
+</article>
+
+<p class="case-disclaimer">
+  <em>This case study is shared for educational purposes with patient consent
+  and identifying details removed or altered to protect privacy. It does not
+  constitute medical advice or a guarantee of similar outcomes.</em>
+</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalScholarlyArticle",
+  "headline": {{ page.title | jsonify }},
+  "about": { "@type": "MedicalCondition", "name": {{ page.condition | jsonify }} },
+  "author": { "@type": "Physician", "name": {{ page.doctor | jsonify }} },
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "publisher": { "@type": "MedicalClinic", "name": "{{ site.clinic.legal_name }}" },
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>

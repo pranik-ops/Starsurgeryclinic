@@ -1,0 +1,15 @@
+main:
+  - title: "Conditions"
+    url: /conditions/
+  - title: "Treatments"
+    url: /treatments/
+  - title: "Doctors"
+    url: /doctors/
+  - title: "Case Studies"
+    url: /case-studies/
+  - title: "About"
+    url: /about/
+  - title: "Emergency / Trauma"
+    url: /emergency/
+  - title: "Contact"
+    url: /contact/

@@ -1,0 +1,41 @@
+{%- comment -%}
+  Usage: add to a page/collection item's front matter:
+
+  faqs:
+    - q: "How long is recovery after cataract surgery?"
+      a: "Most patients resume normal activity within 24–48 hours..."
+    - q: "Is cataract surgery painful?"
+      a: "No. It's done under topical or local anesthesia..."
+
+  Then in the layout: {% include faq-block.html faqs=page.faqs %}
+{%- endcomment -%}
+{% if include.faqs %}
+<section class="faq-block" aria-label="Frequently asked questions">
+  <h2>Frequently Asked Questions</h2>
+  {% for item in include.faqs %}
+  <div class="faq-item">
+    <h3>{{ item.q }}</h3>
+    <p>{{ item.a }}</p>
+  </div>
+  {% endfor %}
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in include.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

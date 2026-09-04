@@ -1,0 +1,146 @@
+# ─────────────────────────────────────────────
+# SITE SETTINGS — edit these first
+# ─────────────────────────────────────────────
+title: "Clarity Eye Institute"                 # TODO: real clinic name
+tagline: "Comprehensive Eye Care & Ocular Trauma Center"
+description: >-
+  Clarity Eye Institute provides complete ophthalmic care and 24/7 ocular
+  trauma services, from routine eye exams to emergency eye surgery.
+url: "https://YOUR-GH-USERNAME.github.io"      # TODO: no trailing slash
+baseurl: "/eye-clinic-site"                    # TODO: match your repo name exactly (project repo)
+repository: "YOUR-GH-USERNAME/eye-clinic-site" # TODO: used by some MM features
+locale: "en-US"
+
+# Clinic identity (reused across schema includes + layouts)
+clinic:
+  legal_name: "Clarity Eye Institute"
+  phone: "+1-555-010-2020"
+  emergency_phone: "+1-555-010-2029"
+  email: "info@example.com"
+  address:
+    street: "123 Vision Way"
+    city: "Springfield"
+    region: "IL"
+    postal_code: "62704"
+    country: "US"
+  geo:
+    latitude: 39.7817
+    longitude: -89.6501
+  hours: "Mon–Sat 9:00 AM–6:00 PM; Emergency trauma line 24/7"
+  founded: "1998"
+
+# ─────────────────────────────────────────────
+# THEME
+# ─────────────────────────────────────────────
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"               # try "air", "contrast", "dark" etc.
+
+# ─────────────────────────────────────────────
+# PLUGINS
+# ─────────────────────────────────────────────
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+# ─────────────────────────────────────────────
+# BUILD SETTINGS
+# ─────────────────────────────────────────────
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /:categories/:title/
+
+include:
+  - _pages
+  - robots.txt
+  - llms.txt
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - node_modules
+
+# ─────────────────────────────────────────────
+# COLLECTIONS
+# One collection per repeating content type. Each becomes browsable
+# at /conditions/, /treatments/, /doctors/, /case-studies/.
+# ─────────────────────────────────────────────
+collections:
+  conditions:
+    output: true
+    permalink: /conditions/:path/
+  treatments:
+    output: true
+    permalink: /treatments/:path/
+  doctors:
+    output: true
+    permalink: /doctors/:path/
+  case_studies:
+    output: true
+    permalink: /case-studies/:path/
+  testimonials:
+    output: false          # pulled into pages via Liquid, not standalone pages
+
+# ─────────────────────────────────────────────
+# DEFAULTS — applied per collection so you don't repeat front matter
+# ─────────────────────────────────────────────
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: false
+
+  - scope:
+      path: ""
+      type: "conditions"
+    values:
+      layout: condition
+      sitemap: true
+      toc: true
+
+  - scope:
+      path: ""
+      type: "treatments"
+    values:
+      layout: condition        # treatments reuse the same layout/schema pattern
+      sitemap: true
+      toc: true
+
+  - scope:
+      path: ""
+      type: "doctors"
+    values:
+      layout: doctor
+      sitemap: true
+
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: case-study
+      sitemap: true
+
+# ─────────────────────────────────────────────
+# SEO / SOCIAL (used by jekyll-seo-tag)
+# ─────────────────────────────────────────────
+logo: "/assets/images/logo.png"
+social:
+  type: "MedicalClinic"
+  name: "Clarity Eye Institute"
+  links:
+    - "https://www.facebook.com/YOUR-PAGE"
+    - "https://www.instagram.com/YOUR-HANDLE"
+    - "https://www.linkedin.com/company/YOUR-COMPANY"
+
+# ─────────────────────────────────────────────
+# NAVIGATION (Minimal Mistakes reads this from _data/navigation.yml)
+# ─────────────────────────────────────────────
