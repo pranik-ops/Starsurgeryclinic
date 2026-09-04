@@ -1,33 +1,33 @@
 # ─────────────────────────────────────────────
 # SITE SETTINGS — edit these first
 # ─────────────────────────────────────────────
-title: "Clarity Eye Institute"                 # TODO: real clinic name
+title: "Star Eye Center and General Surgery Clinic"                 # TODO: real clinic name
 tagline: "Comprehensive Eye Care & Ocular Trauma Center"
 description: >-
   Clarity Eye Institute provides complete ophthalmic care and 24/7 ocular
   trauma services, from routine eye exams to emergency eye surgery.
-url: "https://YOUR-GH-USERNAME.github.io"      # TODO: no trailing slash
-baseurl: "/eye-clinic-site"                    # TODO: match your repo name exactly (project repo)
-repository: "YOUR-GH-USERNAME/eye-clinic-site" # TODO: used by some MM features
+url: "https://pranik-ops.github.io"      # TODO: no trailing slash
+baseurl: "/Starsurgeryclinic"                    # TODO: match your repo name exactly (project repo)
+repository: "pranik-ops.github.io/Starsurgeryclinic" # TODO: used by some MM features
 locale: "en-US"
 
 # Clinic identity (reused across schema includes + layouts)
 clinic:
-  legal_name: "Clarity Eye Institute"
-  phone: "+1-555-010-2020"
-  emergency_phone: "+1-555-010-2029"
+  legal_name: "Star Eye Center and General Surgery Clinic"
+  phone: "+91-7303 773 733"
+  emergency_phone: "+91-7303 773 733"
   email: "info@example.com"
   address:
-    street: "123 Vision Way"
-    city: "Springfield"
-    region: "IL"
-    postal_code: "62704"
-    country: "US"
+    street: "Jaisingh Chowk, Rampura- Hayatpur Road, Opposite Pyramid Society, Sector 85"
+    city: "Gurugram"
+    region: "Haryana"
+    postal_code: "122505"
+    country: "India"
   geo:
-    latitude: 39.7817
-    longitude: -89.6501
+    latitude: 28.39603796932855
+    longitude: 76.9515003239358
   hours: "Mon–Sat 9:00 AM–6:00 PM; Emergency trauma line 24/7"
-  founded: "1998"
+  founded: "2024"
 
 # ─────────────────────────────────────────────
 # THEME
@@ -135,7 +135,7 @@ defaults:
 logo: "/assets/images/logo.png"
 social:
   type: "MedicalClinic"
-  name: "Clarity Eye Institute"
+  name: "Star Eye Center and General Surgery Clinic"
   links:
     - "https://www.facebook.com/YOUR-PAGE"
     - "https://www.instagram.com/YOUR-HANDLE"
