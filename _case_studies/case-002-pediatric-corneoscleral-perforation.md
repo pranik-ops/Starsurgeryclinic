@@ -1,7 +1,6 @@
 ---
 title: "Emergency Management of Pediatric Corneoscleral Perforation with Iris Incarceration and Secondary Traumatic Cataract"
 slug: pediatric-corneoscleral-perforation
-related_condition: ocular-trauma
 patient_age_range: "8 years"
 treatment_duration: "4 weeks (two-phase)"
 outcome: "BCVA 6/6 (partial) at 1 month post-IOL"

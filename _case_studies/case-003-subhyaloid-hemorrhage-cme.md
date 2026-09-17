@@ -1,7 +1,6 @@
 ---
 title: "Medical Management of Post-Traumatic Subhyaloid Hemorrhage and Cystoid Macular Edema"
 slug: subhyaloid-hemorrhage-cme
-related_condition: vitreous-retinal-trauma
 patient_age_range: "36 years"
 treatment_duration: "3 weeks"
 outcome: "Vision improved from FC @ 2m to 6/12"
