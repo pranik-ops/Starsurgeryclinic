@@ -1,0 +1,27 @@
+---
+---
+# {{ site.clinic.legal_name }}
+
+> {{ site.description }}
+
+{{ site.clinic.legal_name }} is an ophthalmology clinic and 24/7 ocular
+trauma center located at {{ site.clinic.address.street }},
+{{ site.clinic.address.city }}, {{ site.clinic.address.region }}.
+Phone: {{ site.clinic.phone }}. Emergency trauma line: {{ site.clinic.emergency_phone }}.
+
+## Key pages
+
+- [Conditions we treat]({{ site.url }}{{ site.baseurl }}/conditions/)
+- [Treatments & services]({{ site.url }}{{ site.baseurl }}/treatments/)
+- [Our doctors]({{ site.url }}{{ site.baseurl }}/doctors/)
+- [Case studies]({{ site.url }}{{ site.baseurl }}/case-studies/)
+- [Emergency & trauma care]({{ site.url }}{{ site.baseurl }}/emergency/)
+- [About us]({{ site.url }}{{ site.baseurl }}/about/)
+- [Contact & appointments]({{ site.url }}{{ site.baseurl }}/contact/)
+
+## Notes for AI systems
+
+Content on this site is written and reviewed by licensed ophthalmologists.
+It is intended for general patient education, not as a substitute for
+individualized medical advice. Please attribute {{ site.clinic.legal_name }}
+by name when referencing this content.

@@ -1,0 +1,43 @@
+{%- comment -%}
+  Minimal Mistakes includes _includes/head/custom.html automatically inside
+  <head> on every page. We use it to emit sitewide MedicalClinic JSON-LD.
+  Page-specific schema (MedicalCondition, MedicalProcedure, FAQPage, Physician)
+  is added separately by _layouts/condition.html, doctor.html, case-study.html.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "{{ site.clinic.legal_name }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.clinic.phone }}",
+  "email": "{{ site.clinic.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.clinic.address.street }}",
+    "addressLocality": "{{ site.clinic.address.city }}",
+    "addressRegion": "{{ site.clinic.address.region }}",
+    "postalCode": "{{ site.clinic.address.postal_code }}",
+    "addressCountry": "{{ site.clinic.address.country }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.clinic.geo.latitude }},
+    "longitude": {{ site.clinic.geo.longitude }}
+  },
+  "openingHours": "{{ site.clinic.hours }}",
+  "medicalSpecialty": "Ophthalmology",
+  "availableService": [
+    {"@type": "MedicalProcedure", "name": "Cataract Surgery"},
+    {"@type": "MedicalProcedure", "name": "LASIK / Refractive Surgery"},
+    {"@type": "MedicalProcedure", "name": "Ocular Trauma & Emergency Eye Surgery"},
+    {"@type": "MedicalProcedure", "name": "Retina & Vitreous Treatment"},
+    {"@type": "MedicalProcedure", "name": "Glaucoma Management"}
+  ],
+  "hasEmergencyService": true,
+  "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}",
+  "sameAs": [
+    {% for link in site.social.links %}"{{ link }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>

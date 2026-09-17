@@ -1,0 +1,38 @@
+---
+layout: single
+---
+{% include emergency-banner.html %}
+
+<article class="condition-page">
+  {% if page.short_answer %}
+  <p class="short-answer"><strong>{{ page.short_answer }}</strong></p>
+  {% endif %}
+
+  {{ content }}
+
+  {% include faq-block.html faqs=page.faqs %}
+
+  {% assign related = site.case_studies | where_exp: "cs", "cs.related_condition == page.slug" %}
+  {% if related.size > 0 %}
+  <section class="related-case-studies">
+    <h2>Related Case Studies</h2>
+    <ul>
+      {% for cs in related %}
+      <li><a href="{{ cs.url | relative_url }}">{{ cs.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ page.schema_type | default: 'MedicalCondition' }}",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}"
+  {% if page.also_known_as %},"alternateName": {{ page.also_known_as | jsonify }}{% endif %}
+  {% if page.relevant_specialty %},"relevantSpecialty": {{ page.relevant_specialty | jsonify }}{% endif %}
+}
+</script>
