@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <!-- Eye icon SVG -->
+      <svg class="brand-icon" width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f6e6e"/>
+        <ellipse cx="32" cy="32" rx="22" ry="13" fill="#eafaf8"/>
+        <circle cx="32" cy="32" r="9" fill="#1d6fbf"/>
+        <circle cx="32" cy="32" r="4" fill="#08252a"/>
+        <circle cx="35.5" cy="28.5" r="2.2" fill="#ffffff"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.clinic.legal_name }}</span>
+        <span class="brand-tag">Ophthalmology &amp; Ocular Trauma — {{ site.clinic.address.city }}</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ '/conditions/' | relative_url }}" {% if page.url contains '/conditions/' %}aria-current="page"{% endif %}>Conditions</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta" {% if page.url contains '/contact/' %}aria-current="page"{% endif %}>Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

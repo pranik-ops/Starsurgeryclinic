@@ -1,0 +1,29 @@
+<div class="stats-bar">
+  <div class="stats-grid">
+    {% if include.stats %}
+      {% for stat in include.stats %}
+        <div class="stat-item">
+          <strong>{{ stat.value }}</strong>
+          <span>{{ stat.label }}</span>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="stat-item">
+        <strong>24/7 Available</strong>
+        <span>Emergency Trauma Services</span>
+      </div>
+      <div class="stat-item">
+        <strong>MBBS, MS</strong>
+        <span>Ophthalmology Trained</span>
+      </div>
+      <div class="stat-item">
+        <strong>Comprehensive Care</strong>
+        <span>Eye & General Surgery</span>
+      </div>
+      <div class="stat-item">
+        <strong>{{ site.clinic.address.city }}</strong>
+        <span>{{ site.clinic.address.postal_code }}, India</span>
+      </div>
+    {% endif %}
+  </div>
+</div>

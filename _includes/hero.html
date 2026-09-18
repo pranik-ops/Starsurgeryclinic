@@ -1,0 +1,28 @@
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">{{ include.eyebrow | default: 'Advanced Eye Care' }}</span>
+      <h1>{{ include.title }}</h1>
+      <p>{{ include.description }}</p>
+      <div class="hero-actions">
+        {% if include.primary_btn_text %}
+          <a class="btn btn-primary" href="{{ include.primary_btn_url | relative_url }}">{{ include.primary_btn_text }}</a>
+        {% endif %}
+        {% if include.secondary_btn_text %}
+          <a class="btn btn-outline" href="{{ include.secondary_btn_url | relative_url }}">{{ include.secondary_btn_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <circle cx="150" cy="150" r="140" fill="rgba(255,255,255,0.07)"/>
+        <circle cx="150" cy="150" r="108" fill="rgba(255,255,255,0.09)"/>
+        <circle cx="150" cy="150" r="76" fill="rgba(255,255,255,0.12)"/>
+        <ellipse cx="150" cy="150" rx="70" ry="42" fill="#eafaf8"/>
+        <circle cx="150" cy="150" r="26" fill="#0a4f4f"/>
+        <circle cx="150" cy="150" r="12" fill="#052a2a"/>
+        <circle cx="159" cy="141" r="5.5" fill="#ffffff" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+</section>

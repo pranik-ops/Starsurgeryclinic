@@ -1,0 +1,460 @@
+/* Star Eye Center And General Surgery Clinic — Custom Design */
+
+:root {
+  --primary: #0f6e6e;
+  --primary-dark: #0a4f4f;
+  --primary-darker: #052a2a;
+  --accent: #1d6fbf;
+  --navy: #12293e;
+  --navy-light: #1c3c58;
+  --bg: #f6fbfb;
+  --card-bg: #ffffff;
+  --text: #1c2a2a;
+  --text-muted: #5a6b6b;
+  --border: #dcebea;
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(15, 110, 110, 0.08);
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / Nav */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-icon {
+  flex-shrink: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.brand-tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a[aria-current="page"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 0.5rem 1.1rem !important;
+  border-radius: 999px;
+  border-bottom: none !important;
+  font-size: 0.9rem;
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, var(--accent) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-copy {
+  flex: 1 1 380px;
+  min-width: 280px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.hero-art {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-art svg {
+  width: 260px;
+  height: 260px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--primary-dark);
+  text-decoration: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #eef8f8;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Stats bar */
+.stats-bar {
+  background: var(--navy);
+  color: #eaf3f3;
+}
+
+.stats-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.stat-item span {
+  font-size: 0.85rem;
+  color: #a9c3c3;
+}
+
+/* Sections */
+section {
+  padding: 2.75rem 1.25rem;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-top: 0;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.section-alt {
+  background: #eef7f7;
+}
+
+/* Why Choose Us cards */
+.why-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: #fff;
+}
+
+.why-section h2 {
+  color: #fff;
+}
+
+.why-section .section-intro {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.why-number {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.55);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.why-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.why-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(15, 110, 110, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: #e6f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.badge {
+  background: #e6f3f3;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #fff7e6;
+  border: 1px solid #f0dca3;
+  color: #6b5416;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto 2rem;
+  font-size: 0.92rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--navy);
+  color: #a9c3c3;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-art svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  nav.main-nav ul {
+    gap: 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+}
