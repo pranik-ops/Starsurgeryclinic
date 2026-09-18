@@ -32,8 +32,9 @@ clinic:
 # ─────────────────────────────────────────────
 # THEME
 # ─────────────────────────────────────────────
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"               # try "air", "contrast", "dark" etc.
+# Using custom layouts instead of remote theme for better design control
+# remote_theme: "mmistakes/minimal-mistakes"
+# minimal_mistakes_skin: "default"
 
 # ─────────────────────────────────────────────
 # PLUGINS
