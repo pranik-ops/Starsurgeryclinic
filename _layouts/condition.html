@@ -15,12 +15,12 @@ layout: default
 
   {% assign related = site.case_studies | where_exp: "cs", "cs.related_condition == page.slug" %}
   {% if related.size > 0 %}
-  <section class="related-case-studies" style="margin-top: 3rem;">
+  <section class="related-case-studies">
     <h2>Related Case Studies</h2>
     <div class="card-grid">
       {% for cs in related %}
         <div class="card">
-          <h3><a href="{{ cs.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ cs.title }}</a></h3>
+          <h3><a href="{{ cs.url | relative_url }}" class="card-link">{{ cs.title }}</a></h3>
           {% if cs.patient_age_range %}
             <p><strong>Patient:</strong> {{ cs.patient_age_range }}</p>
           {% endif %}
