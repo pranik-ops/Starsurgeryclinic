@@ -6,12 +6,111 @@
     <title>{{ page.title | default: site.title }} | {{ site.clinic.legal_name }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}" />
     <link rel="stylesheet" href="{{ '/assets/css/clinic.css' | relative_url }}" />
+
+    <!-- Medical Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmergencyService",
+      "name": "{{ site.clinic.legal_name }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "telephone": "{{ site.clinic.emergency_phone }}",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Emergency",
+        "telephone": "{{ site.clinic.emergency_phone }}"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.clinic.address.street }}",
+        "addressLocality": "{{ site.clinic.address.city }}",
+        "addressRegion": "{{ site.clinic.address.region }}",
+        "postalCode": "{{ site.clinic.address.postal_code }}",
+        "addressCountry": "{{ site.clinic.address.country }}"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ site.clinic.geo.latitude }},
+        "longitude": {{ site.clinic.geo.longitude }}
+      },
+      "medicalSpecialty": [
+        "Ophthalmology",
+        "Emergency Medicine",
+        "Ocular Trauma"
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Emergency Eye Trauma Repair",
+          "description": "24/7 emergency management of penetrating and blunt ocular trauma"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Corneal Laceration Suturing",
+          "description": "Surgical repair of corneal and scleral lacerations"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Cataract Surgery",
+          "description": "Phacoemulsification with intraocular lens implantation"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Retinal Procedures",
+          "description": "Diagnosis and management of retinal conditions"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Comprehensive Eye Exams",
+          "description": "Full eye health assessment and refraction"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "emergencyService": true,
+      "areaServed": {
+        "@type": "Place",
+        "name": "{{ site.clinic.address.city }}, {{ site.clinic.address.region }}, India"
+      }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "{{ site.clinic.legal_name }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/logo.png",
+      "telephone": "{{ site.clinic.phone }}",
+      "email": "{{ site.clinic.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.clinic.address.street }}",
+        "addressLocality": "{{ site.clinic.address.city }}",
+        "addressRegion": "{{ site.clinic.address.region }}",
+        "postalCode": "{{ site.clinic.address.postal_code }}",
+        "addressCountry": "{{ site.clinic.address.country }}"
+      },
+      "founded": "{{ site.clinic.founded }}",
+      "foundingDate": "{{ site.clinic.founded }}"
+    }
+    </script>
+
     {% include head/custom.html %}
   </head>
   <body>
     {% include header.html %}
+    {% include emergency-banner.html %}
 
-    <main>
+    <main class="container">
       {{ content }}
     </main>
 

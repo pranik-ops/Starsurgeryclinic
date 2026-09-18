@@ -1,31 +1,70 @@
 ---
-layout: single
+layout: default
 ---
-<article class="case-study">
-  <p class="case-meta">
-    {% if page.patient_age_range %}Patient: {{ page.patient_age_range }}{% endif %}
-    {% if page.condition %} · Condition: <a href="{{ page.condition_url | relative_url }}">{{ page.condition }}</a>{% endif %}
-    {% if page.doctor %} · Treating physician: <a href="{{ page.doctor_url | relative_url }}">{{ page.doctor }}</a>{% endif %}
-  </p>
+
+<article class="case-study" style="max-width: 900px; margin: 0 auto;">
+  <h1>{{ page.title }}</h1>
+
+  <div class="card" style="background: #f6fbfb; margin-bottom: 2rem; padding: 1.5rem;">
+    <p style="margin: 0.5rem 0;">
+      <strong>Patient:</strong> {{ page.patient_age_range | default: 'Age not specified' }}
+    </p>
+    {% if page.specialty %}
+    <p style="margin: 0.5rem 0;">
+      <strong>Specialty:</strong> {{ page.specialty }}
+    </p>
+    {% endif %}
+    {% if page.treatment_duration %}
+    <p style="margin: 0.5rem 0;">
+      <strong>Treatment Duration:</strong> {{ page.treatment_duration }}
+    </p>
+    {% endif %}
+    {% if page.outcome %}
+    <p style="margin: 0.5rem 0; color: #0f6e6e; font-weight: 600;">
+      <strong>Outcome:</strong> {{ page.outcome }}
+    </p>
+    {% endif %}
+  </div>
 
   {{ content }}
 </article>
 
-<p class="case-disclaimer">
-  <em>This case study is shared for educational purposes with patient consent
-  and identifying details removed or altered to protect privacy. It does not
-  constitute medical advice or a guarantee of similar outcomes.</em>
-</p>
+<section class="disclaimer" style="max-width: 900px; margin: 3rem auto;">
+  <div class="card" style="background: #fff7e6; border: 1px solid #f0dca3;">
+    <strong>Educational Disclaimer:</strong>
+    <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+      This case study is shared for educational purposes with patient consent and identifying details removed or altered to protect privacy. It does not constitute medical advice, diagnosis, or treatment recommendations. Please consult a qualified ophthalmologist about your specific condition.
+    </p>
+  </div>
+</section>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalScholarlyArticle",
   "headline": {{ page.title | jsonify }},
-  "about": { "@type": "MedicalCondition", "name": {{ page.condition | jsonify }} },
-  "author": { "@type": "Physician", "name": {{ page.doctor | jsonify }} },
+  "description": {{ page.short_answer | default: page.excerpt | strip_html | jsonify }},
+  "about": [
+    {% for condition in page.conditions %}
+      {
+        "@type": "MedicalCondition",
+        "name": "{{ condition }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "medicalSpecialty": "{{ page.specialty | default: 'Ophthalmology' }}",
   "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
-  "publisher": { "@type": "MedicalClinic", "name": "{{ site.clinic.legal_name }}" },
-  "url": "{{ site.url }}{{ page.url }}"
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "{{ site.clinic.legal_name }}",
+    "telephone": "{{ site.clinic.phone }}"
+  },
+  "author": {
+    "@type": "Physician",
+    "name": "{{ site.title }}"
+  },
+  "keywords": "{{ page.title }}, ocular trauma, ophthalmology, case study",
+  "url": "{{ site.url }}{{ page.url }}",
+  "educationalLevel": "Medical professional"
 }
 </script>
