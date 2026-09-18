@@ -1,0 +1,82 @@
+---
+layout: default
+title: Contact Us
+permalink: /contact/
+---
+
+<section>
+  <h2>Contact Us</h2>
+  <p class="section-intro">
+    {{ site.clinic.legal_name }} — Available 24/7 for emergency services and appointments.
+  </p>
+
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="card" style="margin-bottom: 2rem;">
+      <h3>📍 Location</h3>
+      <p>
+        {{ site.clinic.address.street }}<br>
+        {{ site.clinic.address.city }}, {{ site.clinic.address.region }} {{ site.clinic.address.postal_code }}<br>
+        {{ site.clinic.address.country }}
+      </p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <h3>📞 Phone</h3>
+      <p>
+        <strong>General/Appointments:</strong><br>
+        <a href="tel:{{ site.clinic.phone }}" class="btn btn-primary">{{ site.clinic.phone }}</a>
+      </p>
+      <p style="margin-top: 1.5rem;">
+        <strong>Emergency Trauma Line:</strong><br>
+        <a href="tel:{{ site.clinic.emergency_phone }}" class="btn btn-primary">{{ site.clinic.emergency_phone }}</a>
+      </p>
+    </div>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <h3>🕐 Hours</h3>
+      <p>{{ site.clinic.hours }}</p>
+    </div>
+
+    <div class="card">
+      <h3>✉️ Email</h3>
+      <p>
+        <a href="mailto:{{ site.clinic.email }}">{{ site.clinic.email }}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <h2>Emergency Services</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🚨 Ocular Trauma</h3>
+      <p>Acute eye injuries requiring immediate intervention. Call our 24/7 emergency line.</p>
+    </div>
+    <div class="card">
+      <h3>👁️ Sudden Vision Loss</h3>
+      <p>Unexplained or sudden changes in vision. Emergency evaluation available immediately.</p>
+    </div>
+    <div class="card">
+      <h3>🔴 Eye Pain & Redness</h3>
+      <p>Severe eye pain, redness, or discharge requiring urgent assessment.</p>
+    </div>
+    <div class="card">
+      <h3>⚠️ Chemical Burns</h3>
+      <p>Chemical exposure to eyes. Seek immediate attention at our trauma center.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Directions</h2>
+  <div class="card">
+    <p>
+      <strong>Landmark:</strong> Opposite Pyramid Society, near Jaisingh Chowk<br>
+      <strong>Distance from major areas:</strong><br>
+      • Near Rampura - Hayatpur Road<br>
+      • Easily accessible from Sector 85 area<br>
+      • Ample parking available
+    </p>
+  </div>
+</section>

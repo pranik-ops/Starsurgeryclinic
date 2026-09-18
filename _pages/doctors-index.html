@@ -1,0 +1,38 @@
+---
+layout: default
+title: Our Medical Team
+permalink: /doctors/
+---
+
+<section>
+  <h2>Our Medical Team</h2>
+  <p class="section-intro">
+    Ophthalmology professionals dedicated to evidence-based eye care and emergency trauma management.
+  </p>
+
+  <div class="card-grid">
+    {% for doctor in site.doctors %}
+      <div class="card">
+        <h3><a href="{{ doctor.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ doctor.title }}</a></h3>
+        {% if doctor.credentials %}
+          <p><strong>{{ doctor.credentials }}</strong></p>
+        {% endif %}
+        {% if doctor.specialties %}
+          <div style="margin-top: 1rem;">
+            <strong>Specialties:</strong>
+            <div class="badges">
+              {% for specialty in doctor.specialties %}
+                <span class="badge">{{ specialty }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        {% if doctor.years_experience %}
+          <p style="font-size: 0.9rem; color: #5a6b6b; margin-top: 1rem;">
+            {{ doctor.years_experience }} years of experience
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

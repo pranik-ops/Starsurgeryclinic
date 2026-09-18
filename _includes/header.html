@@ -17,8 +17,10 @@
     <nav class="main-nav" aria-label="Main navigation">
       <ul>
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
-        <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>About</a></li>
         <li><a href="{{ '/conditions/' | relative_url }}" {% if page.url contains '/conditions/' %}aria-current="page"{% endif %}>Conditions</a></li>
+        <li><a href="{{ '/treatments/' | relative_url }}" {% if page.url contains '/treatments/' %}aria-current="page"{% endif %}>Treatments & Services</a></li>
+        <li><a href="{{ '/doctors/' | relative_url }}" {% if page.url contains '/doctors/' %}aria-current="page"{% endif %}>Our Medical Team</a></li>
+        <li><a href="{{ '/case-studies/' | relative_url }}" {% if page.url contains '/case-studies/' %}aria-current="page"{% endif %}>Clinical Case Studies</a></li>
         <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta" {% if page.url contains '/contact/' %}aria-current="page"{% endif %}>Contact Us</a></li>
       </ul>
     </nav>

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Treatments & Services
+permalink: /treatments/
+---
+
+<section>
+  <h2>Treatments & Services</h2>
+  <p class="section-intro">
+    From routine eye care to emergency surgical intervention — comprehensive treatment options under one roof.
+  </p>
+
+  <div class="card-grid">
+    {% for treatment in site.treatments %}
+      <div class="card">
+        <h3><a href="{{ treatment.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ treatment.title }}</a></h3>
+        {% if treatment.short_answer %}
+          <p>{{ treatment.short_answer }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

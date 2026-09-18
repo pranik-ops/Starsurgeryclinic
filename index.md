@@ -5,12 +5,12 @@ permalink: /
 ---
 
 {% include hero.html 
-  eyebrow="Advanced Ophthalmic Care"
-  title="Emergency Eye Care & Trauma Services in Gurgaon"
-  description="24/7 comprehensive ophthalmology care with expertise in emergency trauma, cataract surgery, and retinal conditions."
-  primary_btn_text="View Conditions Treated"
-  primary_btn_url="/conditions/"
-  secondary_btn_text="Emergency Contact"
+  eyebrow="24/7 Emergency Ophthalmology"
+  title="Comprehensive Eye Care & Ocular Trauma Services"
+  description="Expert emergency eye care, trauma surgery, and specialized treatments in Gurgaon. Available round-the-clock for urgent cases."
+  primary_btn_text="Explore Our Services"
+  primary_btn_url="/treatments/"
+  secondary_btn_text="Emergency: +91-7303 773 733"
   secondary_btn_url="tel:+91-7303773733"
 %}
 
@@ -44,100 +44,92 @@ permalink: /
 </section>
 
 <section>
-  <h2>Conditions We Treat</h2>
-  <p class="section-intro">We diagnose and manage a wide range of eye conditions with specialized expertise in trauma and emergency care.</p>
-  <div class="card-grid">
-    {% for c in site.conditions limit:6 %}
-      <div class="card">
-        <h3><a href="{{ c.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ c.title }}</a></h3>
-        {% if c.short_answer %}
-          <p>{{ c.short_answer }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-  <p style="text-align: center; margin-top: 2rem;">
-    <a href="{{ '/conditions/' | relative_url }}" class="btn btn-primary">View All Conditions</a>
-  </p>
-</section>
-
-<section class="section-alt">
-  <h2>Treatments & Services</h2>
-  <p class="section-intro">From routine eye care to emergency surgical intervention — comprehensive treatment options under one roof.</p>
-  <div class="card-grid">
-    {% for t in site.treatments limit:6 %}
-      <div class="card">
-        <h3><a href="{{ t.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ t.title }}</a></h3>
-        {% if t.short_answer %}
-          <p>{{ t.short_answer }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-  <p style="text-align: center; margin-top: 2rem;">
-    <a href="{{ '/treatments/' | relative_url }}" class="btn btn-primary">View All Treatments</a>
-  </p>
-</section>
-
-<section>
-  <h2>Our Medical Team</h2>
-  <p class="section-intro">Ophthalmology professionals dedicated to evidence-based eye care and emergency trauma management.</p>
-  <div class="card-grid">
-    {% for d in site.doctors %}
-      <div class="card">
-        <h3><a href="{{ d.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ d.title }}</a></h3>
-        {% if d.credentials %}
-          <p><strong>{{ d.credentials }}</strong></p>
-        {% endif %}
-        {% if d.specialties %}
-          <p style="font-size: 0.9rem; color: #5a6b6b;">
-            {% for specialty in d.specialties %}
-              {{ specialty }}{% unless forloop.last %} • {% endunless %}
-            {% endfor %}
-          </p>
-        {% endif %}
-      </div>
-    {% endfor %}
+  <h2>Our Services Overview</h2>
+  <p class="section-intro">Complete eye care solutions from routine exams to emergency trauma surgery.</p>
+  
+  <div class="card-grid" style="max-width: 1100px; margin: 0 auto;">
+    <a href="{{ '/conditions/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+      <h3 style="color: #0f6e6e; margin-top: 0;">👁️ Conditions We Treat</h3>
+      <p>Learn about eye conditions we diagnose and manage, with expertise in emergency trauma care and specialized procedures.</p>
+      <strong style="color: #1d6fbf;">Explore →</strong>
+    </a>
+    
+    <a href="{{ '/treatments/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+      <h3 style="color: #0f6e6e; margin-top: 0;">🏥 Treatments & Services</h3>
+      <p>Comprehensive surgical and non-surgical treatment options including cataract surgery, trauma repair, and more.</p>
+      <strong style="color: #1d6fbf;">Explore →</strong>
+    </a>
+    
+    <a href="{{ '/doctors/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+      <h3 style="color: #0f6e6e; margin-top: 0;">👨‍⚕️ Our Medical Team</h3>
+      <p>Meet our experienced ophthalmologists dedicated to evidence-based eye care and emergency trauma management.</p>
+      <strong style="color: #1d6fbf;">Meet Our Team →</strong>
+    </a>
+    
+    <a href="{{ '/case-studies/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+      <h3 style="color: #0f6e6e; margin-top: 0;">📋 Clinical Case Studies</h3>
+      <p>Learn from published case studies demonstrating our surgical expertise and successful patient outcomes.</p>
+      <strong style="color: #1d6fbf;">View Cases →</strong>
+    </a>
+    
+    <a href="{{ '/contact/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+      <h3 style="color: #0f6e6e; margin-top: 0;">📞 Contact & Directions</h3>
+      <p>Find us on the map, get directions, and book your appointment or emergency consultation with us.</p>
+      <strong style="color: #1d6fbf;">Contact Us →</strong>
+    </a>
   </div>
 </section>
 
 <section class="section-alt">
-  <h2>Clinical Case Studies</h2>
-  <p class="section-intro">Learn from our published case studies demonstrating surgical outcomes and clinical management approaches.</p>
-  <div class="card-grid">
-    {% for cs in site.case_studies limit:3 %}
-      <div class="card">
-        <h3><a href="{{ cs.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ cs.title }}</a></h3>
-        {% if cs.patient_age_range %}
-          <p><strong>Patient:</strong> {{ cs.patient_age_range }}</p>
-        {% endif %}
-        {% if cs.outcome %}
-          <p><strong>Outcome:</strong> {{ cs.outcome }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
+  <h2>Why Choose Star Eye Center</h2>
+  <p class="section-intro">A dedicated clinic offering specialized, experienced eye care with 24/7 emergency services.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-number">01</span>
+      <h3>24/7 Emergency Care</h3>
+      <p>Round-the-clock emergency trauma unit for acute eye injuries and urgent conditions requiring immediate intervention.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-number">02</span>
+      <h3>Comprehensive Surgery</h3>
+      <p>Full-spectrum ophthalmic surgery capabilities including corneal repair, cataract extraction, and IOL implantation.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-number">03</span>
+      <h3>Evidence-Based Approach</h3>
+      <p>Clinical decisions driven by current medical literature, detailed case documentation, and patient-centered outcomes.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-number">04</span>
+      <h3>Multi-Specialty Services</h3>
+      <p>Coordinated eye and general surgery services for complex cases requiring integrated ophthalmology care.</p>
+    </div>
   </div>
-  <p style="text-align: center; margin-top: 2rem;">
-    <a href="{{ '/case-studies/' | relative_url }}" class="btn btn-primary">View All Case Studies</a>
-  </p>
 </section>
 
 <section>
-  <h2>Visit Us</h2>
-  <p class="section-intro">{{ site.clinic.legal_name }} — Available 24/7 for emergency services.</p>
+  <h2>Quick Contact</h2>
   <div style="max-width: 640px; margin: 0 auto; text-align: center;">
-    <p><strong>📍 Location</strong></p>
-    <p>{{ site.clinic.address.street }}<br>
-    {{ site.clinic.address.city }}, {{ site.clinic.address.region }} {{ site.clinic.address.postal_code }}</p>
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <h3>📍 Our Location</h3>
+      <p>
+        {{ site.clinic.address.street }}<br>
+        {{ site.clinic.address.city }}, {{ site.clinic.address.region }} {{ site.clinic.address.postal_code }}
+      </p>
+    </div>
     
-    <p><strong>📞 Contact</strong></p>
-    <p><a href="tel:{{ site.clinic.phone }}" class="btn btn-primary" style="margin: 0.5rem;">{{ site.clinic.phone }}</a></p>
-    
-    <p><strong>🕐 Hours</strong></p>
-    <p>{{ site.clinic.hours }}</p>
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <h3>🕐 Hours</h3>
+      <p>{{ site.clinic.hours }}</p>
+    </div>
     
     <p style="margin-top: 2rem;">
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Book an Appointment</a>
+      <a href="tel:{{ site.clinic.phone }}" class="btn btn-primary" style="margin: 0.5rem;">
+        Call: {{ site.clinic.phone }}
+      </a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary" style="margin: 0.5rem;">
+        Book Appointment
+      </a>
     </p>
   </div>
 </section>

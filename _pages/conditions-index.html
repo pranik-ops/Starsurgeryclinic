@@ -1,0 +1,23 @@
+---
+layout: default
+title: Conditions We Treat
+permalink: /conditions/
+---
+
+<section>
+  <h2>Conditions We Treat</h2>
+  <p class="section-intro">
+    We diagnose and manage a wide range of eye conditions with specialized expertise in trauma and emergency care.
+  </p>
+
+  <div class="card-grid">
+    {% for condition in site.conditions %}
+      <div class="card">
+        <h3><a href="{{ condition.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ condition.title }}</a></h3>
+        {% if condition.short_answer %}
+          <p>{{ condition.short_answer }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
