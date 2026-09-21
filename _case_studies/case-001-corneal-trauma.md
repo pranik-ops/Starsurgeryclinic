@@ -5,7 +5,7 @@ date: 2026-01-15
 patient_age_range: "30–35"
 condition: "Corneal Laceration"
 condition_url: /conditions/corneal-laceration/
-doctor: "Dr. Jane Doe"
+doctor: "Dr. Amita Yadav"
 doctor_url: /doctors/dr-jane-doe/
 related_condition: corneal-laceration
 excerpt: >-
@@ -39,6 +39,4 @@ scheduled for gradual removal over subsequent visits.
 
 ---
 
-*Replace this placeholder with your own case, keeping identifying details
-(exact age, name, dates, employer, distinguishing photos) removed or
-generalized, per your consent and privacy policy.*
+**Surgeon:** Dr. Amita Yadav, MBBS, MS (Ophthalmology), Corneal & Anterior Segment Specialist
