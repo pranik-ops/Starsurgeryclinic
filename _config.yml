@@ -67,6 +67,8 @@ exclude:
   - vendor
   - README.md
   - node_modules
+  - resources
+  - .claude
 
 # ─────────────────────────────────────────────
 # COLLECTIONS
