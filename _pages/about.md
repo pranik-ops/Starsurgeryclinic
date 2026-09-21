@@ -1,7 +1,8 @@
 ---
 title: "About Us"
 permalink: /about/
-layout: single
+layout: default
+description: Learn about Star Eye Center and General Surgery Clinic — our mission, team qualifications, advanced diagnostic capabilities, and commitment to comprehensive eye care and 24/7 trauma response.
 ---
 
 Founded in {{ site.clinic.founded }}, {{ site.clinic.legal_name }} provides
