@@ -135,7 +135,7 @@ defaults:
 # ─────────────────────────────────────────────
 # SEO / SOCIAL (used by jekyll-seo-tag)
 # ─────────────────────────────────────────────
-logo: "/assets/images/logo.png"
+# logo: "/assets/images/logo.png"  # Disabled: image file not found
 social:
   type: "MedicalClinic"
   name: "Star Eye Center and General Surgery Clinic"
