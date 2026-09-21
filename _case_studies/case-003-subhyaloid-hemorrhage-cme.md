@@ -13,7 +13,7 @@ schema_json: |
     "name": "Clinical Case Brief: Closed Globe Blunt Trauma Resulting in Subhyaloid Hemorrhage and Cystoid Macular Edema Treated with Intravitreal Anti-VEGF",
     "author": {
       "@type": "Physician",
-      "name": "Dr. [Doctor Name]",
+      "name": "Dr. Amita Yadav",
       "medicalSpecialty": "Ophthalmology"
     },
     "about": [
@@ -105,4 +105,4 @@ Blunt sports trauma causing immediate vision loss can often be **reversed withou
 
 ---
 
-**Surgeon:** Dr. [Doctor Name], MBBS, MS (Ophthalmology), Vitreo-Retinal Specialist
+**Surgeon:** Dr. Amita Yadav, MBBS, MS (Ophthalmology), Vitreo-Retinal Specialist

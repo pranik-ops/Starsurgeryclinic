@@ -14,7 +14,7 @@ schema_json: |
     "name": "Vision Recovery After Sports Trauma: Subhyaloid Hemorrhage and Cystoid Macular Edema",
     "author": {
       "@type": "Physician",
-      "name": "Dr. [Doctor Name]",
+      "name": "Dr. Amita Yadav",
       "medicalSpecialty": "Ophthalmology"
     },
     "about": [
@@ -113,4 +113,4 @@ Sports injuries to the eye that cause sudden vision loss and a dark spot in your
 
 ---
 
-**Surgeon:** Dr. [Doctor Name], MBBS, MS (Ophthalmology), Vitreo-Retinal Specialist
+**Surgeon:** Dr. Amita Yadav, MBBS, MS (Ophthalmology), Vitreo-Retinal Specialist

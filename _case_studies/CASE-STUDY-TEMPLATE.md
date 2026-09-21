@@ -14,7 +14,7 @@ schema_json: |
     "name": "[Title of the case]",
     "author": {
       "@type": "Physician",
-      "name": "Dr. [Doctor Name]",
+      "name": "Dr. Amita Yadav",
       "medicalSpecialty": "Ophthalmology"
     },
     "about": [
@@ -102,4 +102,4 @@ schema_json: |
 
 ---
 
-**Surgeon:** Dr. [Doctor Name], [Credentials], [Specialty]
+**Surgeon:** Dr. Amita Yadav, MBBS, MS (Ophthalmology), [Specialty]

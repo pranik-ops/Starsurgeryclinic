@@ -16,7 +16,7 @@ clinic:
   legal_name: "Star Eye Center and General Surgery Clinic"
   phone: "+91-7303 773 733"
   emergency_phone: "+91-7303 773 733"
-  email: "info@example.com"
+  email: "contact@stareycenter.com"
   address:
     street: "Jaisingh Chowk, Rampura- Hayatpur Road, Opposite Pyramid Society, Sector 85"
     city: "Gurugram"
@@ -138,9 +138,9 @@ social:
   type: "MedicalClinic"
   name: "Star Eye Center and General Surgery Clinic"
   links:
-    - "https://www.facebook.com/YOUR-PAGE"
-    - "https://www.instagram.com/YOUR-HANDLE"
-    - "https://www.linkedin.com/company/YOUR-COMPANY"
+    - "https://www.facebook.com/stareycenter"
+    - "https://www.instagram.com/stareycenter"
+    - "https://www.linkedin.com/company/stareycenter"
 
 # ─────────────────────────────────────────────
 # NAVIGATION (Minimal Mistakes reads this from _data/navigation.yml)

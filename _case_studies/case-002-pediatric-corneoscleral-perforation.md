@@ -13,7 +13,7 @@ schema_json: |
     "name": "Clinical Case Brief: Emergency Pediatric Corneoscleral Perforation Repair and Secondary Traumatic Cataract Management",
     "author": {
       "@type": "Physician",
-      "name": "Dr. [Doctor Name]",
+      "name": "Dr. Amita Yadav",
       "medicalSpecialty": "Ophthalmology"
     },
     "about": [
@@ -107,4 +107,4 @@ Penetrating pediatric eye injuries require **immediate tectonic closure** to pre
 
 ---
 
-**Surgeon:** Dr. [Doctor Name], MBBS, MS (Ophthalmology), Fellow in Cornea & Anterior Segment Trauma
+**Surgeon:** Dr. Amita Yadav, MBBS, MS (Ophthalmology), Fellow in Cornea & Anterior Segment Trauma
