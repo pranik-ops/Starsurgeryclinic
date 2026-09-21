@@ -6,7 +6,7 @@ patient_age_range: "30–35"
 condition: "Corneal Laceration"
 condition_url: /conditions/corneal-laceration/
 doctor: "Dr. Amita Yadav"
-doctor_url: /doctors/dr-jane-doe/
+doctor_url: /doctors/dr-amita-yadav/
 related_condition: corneal-laceration
 excerpt: >-
   A patient presented to our trauma center with a penetrating corneal
