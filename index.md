@@ -80,33 +80,6 @@ permalink: /
   </div>
 </section>
 
-<section class="section-alt">
-  <h2>Why Choose Star Eye Center</h2>
-  <p class="section-intro">A dedicated clinic offering specialized, experienced eye care with 24/7 emergency services.</p>
-  <div class="why-grid">
-    <div class="why-card">
-      <span class="why-number">01</span>
-      <h3>24/7 Emergency Care</h3>
-      <p>Round-the-clock emergency trauma unit for acute eye injuries and urgent conditions requiring immediate intervention.</p>
-    </div>
-    <div class="why-card">
-      <span class="why-number">02</span>
-      <h3>Comprehensive Surgery</h3>
-      <p>Full-spectrum ophthalmic surgery capabilities including corneal repair, cataract extraction, and IOL implantation.</p>
-    </div>
-    <div class="why-card">
-      <span class="why-number">03</span>
-      <h3>Evidence-Based Approach</h3>
-      <p>Clinical decisions driven by current medical literature, detailed case documentation, and patient-centered outcomes.</p>
-    </div>
-    <div class="why-card">
-      <span class="why-number">04</span>
-      <h3>Multi-Specialty Services</h3>
-      <p>Coordinated eye and general surgery services for complex cases requiring integrated ophthalmology care.</p>
-    </div>
-  </div>
-</section>
-
 <section>
   <h2>Quick Contact</h2>
   <div style="max-width: 640px; margin: 0 auto; text-align: center;">
