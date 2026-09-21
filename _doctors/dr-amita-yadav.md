@@ -2,7 +2,6 @@
 title: "Dr. Amita Yadav"
 slug: dr-amita-yadav
 credentials: "MBBS, MS (Ophthalmology) — Ocular Trauma & Anterior Segment Specialist"
-photo: /assets/images/doctors/dr-amita-yadav.jpg
 specialties:
   - "Ocular Trauma"
   - "Cornea & Anterior Segment Surgery"
