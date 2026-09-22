@@ -140,6 +140,22 @@ nav.main-nav a[aria-current="page"] {
   background: var(--primary-dark);
 }
 
+/* Emergency banner (shown site-wide, directly under the header) */
+.emergency-banner {
+  background: #fdecea;
+  color: var(--danger-dark);
+  text-align: center;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f3c6c2;
+}
+
+.emergency-banner a {
+  color: var(--danger-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -388,6 +404,7 @@ section h2 {
 .case-study-outcome {
   color: var(--primary);
   font-weight: 600;
+  margin-top: 1rem;
 }
 
 .card:hover {
@@ -427,13 +444,64 @@ section h2 {
   text-decoration: underline;
 }
 
+/* A whole card can itself be the link (e.g. homepage service cards) —
+   this keeps it from rendering with default anchor underline/color. */
+a.card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
 .related-case-studies {
   margin-top: 3rem;
 }
 
-.doctor-page {
+/* Detail/article pages (condition, treatment, doctor, case-study) share one reading width */
+.content-page {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.short-answer {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  border-left: 4px solid var(--primary);
+  padding: 0.25rem 0 0.25rem 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+/* FAQ block (auto-included wherever a page/collection item sets `faqs:`) */
+.faq-block {
+  margin-top: 2.5rem;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.5rem;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-muted);
 }
 
 .doctor-bio {
@@ -459,6 +527,10 @@ section h2 {
   margin-top: 2rem;
   font-size: 1rem;
   color: var(--text-muted);
+}
+
+.doctor-specialties {
+  margin-top: 1rem;
 }
 
 /* Badges */
@@ -549,8 +621,34 @@ section h2 {
   border-radius: var(--radius);
 }
 
+/* Utilities — small, reusable helpers. Reach for one of these instead of a
+   hardcoded color or inline style="" when writing new pages/content. */
 .text-accent-primary {
   color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .protocol-card {

@@ -14,7 +14,7 @@ description: Surgical procedures and comprehensive eye care services including e
   <div class="card-grid">
     {% for treatment in site.treatments %}
       <div class="card">
-        <h3><a href="{{ treatment.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ treatment.title }}</a></h3>
+        <h3><a href="{{ treatment.url | relative_url }}" class="card-link">{{ treatment.title }}</a></h3>
         {% if treatment.short_answer %}
           <p>{{ treatment.short_answer }}</p>
         {% endif %}

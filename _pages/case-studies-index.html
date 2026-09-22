@@ -14,20 +14,20 @@ description: Published clinical case studies demonstrating surgical outcomes, di
   <div class="card-grid">
     {% for case_study in site.case_studies %}
       <div class="card">
-        <h3><a href="{{ case_study.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ case_study.title }}</a></h3>
+        <h3><a href="{{ case_study.url | relative_url }}" class="card-link">{{ case_study.title }}</a></h3>
 
         {% if case_study.patient_age_range %}
           <p><strong>Patient:</strong> {{ case_study.patient_age_range }}</p>
         {% endif %}
 
         {% if case_study.specialty %}
-          <p style="font-size: 0.9rem; color: #5a6b6b;">
+          <p class="card-meta">
             <strong>Specialty:</strong> {{ case_study.specialty }}
           </p>
         {% endif %}
 
         {% if case_study.outcome %}
-          <p style="margin-top: 1rem; font-weight: 600; color: #0f6e6e;">
+          <p class="case-study-outcome">
             Outcome: {{ case_study.outcome }}
           </p>
         {% endif %}

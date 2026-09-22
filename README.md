@@ -56,6 +56,48 @@ automatic FAQ blocks and JSON-LD schema, so keep those fields consistent.
 - `llms.txt` site summary for AI agents
 - `jekyll-sitemap` + `jekyll-seo-tag` for classic SEO
 
+## Design system — keep the site visually consistent
+
+All styling lives in one file: `assets/css/clinic.css`. There is no SCSS
+build step and no per-page stylesheet — every page and layout links that
+one file, so it's the single source of truth for color, spacing, and
+components.
+
+- **Tokens**: colors, radius, shadow, and max-width are CSS custom
+  properties on `:root` (`--primary`, `--accent`, `--text-muted`,
+  `--border`, `--radius`, `--shadow`, `--max-width`, `--danger`, ...).
+  Never hand-type a hex color in a page — use a token, or one of the text
+  utilities below, so a future palette change only touches one file.
+- **Reusable components**: `.card` / `.card-grid` / `.card-stack` /
+  `.card-link` / `.card-meta`, `.btn` / `.btn-primary` / `.btn-outline` /
+  `.btn-group`, `.badges` / `.badge`, `.section-alt` / `.section-tinted`,
+  `.disclaimer`, `.faq-block` / `.faq-item`. `.content-page` is the shared
+  reading width for detail pages (`_layouts/condition.html`,
+  `doctor.html`, `case-study.html`) — add it alongside a page-type class
+  rather than a one-off `max-width` on a new layout.
+- **Text utilities**: `.text-accent-primary`, `.text-accent`,
+  `.text-muted`, `.text-center`.
+- **Rule**: no `style="..."` attributes in pages, layouts, or includes.
+  If nothing existing fits, add a small named class to `clinic.css`
+  (matching the naming style already there) instead of inlining one.
+  This is enforced automatically — see below.
+
+### Automated consistency check
+
+`script/check_theme_consistency.rb` scans every page/layout/include and
+fails if it finds (1) an inline `style="..."` attribute, or (2) a `class`
+used in markup that has no matching rule in `clinic.css` (a good proxy for
+"this element will render unstyled"). It runs in CI
+(`.github/workflows/pages.yml`) on every push and PR, and you can run it
+locally before committing:
+
+```bash
+ruby script/check_theme_consistency.rb
+```
+
+The `.claude/skills/website-code-review` skill also checks new pages
+against this same design system during review.
+
 ## Still TODO (see the phased plan)
 
 - [ ] Real logo, favicon, and doctor/clinic photos in `/assets/images/`

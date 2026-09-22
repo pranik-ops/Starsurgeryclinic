@@ -29,6 +29,9 @@ jobs:
           bundler-cache: true
           cache-version: 0
 
+      - name: Check theme consistency
+        run: ruby script/check_theme_consistency.rb
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4

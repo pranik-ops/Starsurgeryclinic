@@ -47,43 +47,43 @@ permalink: /
   <h2>Our Services Overview</h2>
   <p class="section-intro">Complete eye care solutions from routine exams to emergency trauma surgery.</p>
   
-  <div class="card-grid" style="max-width: 1100px; margin: 0 auto;">
-    <a href="{{ '/conditions/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
-      <h3 style="color: #0f6e6e; margin-top: 0;">👁️ Conditions We Treat</h3>
+  <div class="card-grid">
+    <a href="{{ '/conditions/' | relative_url }}" class="card">
+      <h3>👁️ Conditions We Treat</h3>
       <p>Learn about eye conditions we diagnose and manage, with expertise in emergency trauma care and specialized procedures.</p>
-      <strong style="color: #1d6fbf;">Explore →</strong>
+      <strong class="text-accent">Explore →</strong>
     </a>
     
-    <a href="{{ '/treatments/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
-      <h3 style="color: #0f6e6e; margin-top: 0;">🏥 Treatments & Services</h3>
+    <a href="{{ '/treatments/' | relative_url }}" class="card">
+      <h3>🏥 Treatments & Services</h3>
       <p>Comprehensive surgical and non-surgical treatment options including cataract surgery, trauma repair, and more.</p>
-      <strong style="color: #1d6fbf;">Explore →</strong>
+      <strong class="text-accent">Explore →</strong>
     </a>
     
-    <a href="{{ '/doctors/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
-      <h3 style="color: #0f6e6e; margin-top: 0;">👨‍⚕️ Our Medical Team</h3>
+    <a href="{{ '/doctors/' | relative_url }}" class="card">
+      <h3>👨‍⚕️ Our Medical Team</h3>
       <p>Meet our experienced ophthalmologists dedicated to evidence-based eye care and emergency trauma management.</p>
-      <strong style="color: #1d6fbf;">Meet Our Team →</strong>
+      <strong class="text-accent">Meet Our Team →</strong>
     </a>
     
-    <a href="{{ '/case-studies/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
-      <h3 style="color: #0f6e6e; margin-top: 0;">📋 Clinical Case Studies</h3>
+    <a href="{{ '/case-studies/' | relative_url }}" class="card">
+      <h3>📋 Clinical Case Studies</h3>
       <p>Learn from published case studies demonstrating our surgical expertise and successful patient outcomes.</p>
-      <strong style="color: #1d6fbf;">View Cases →</strong>
+      <strong class="text-accent">View Cases →</strong>
     </a>
     
-    <a href="{{ '/contact/' | relative_url }}" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
-      <h3 style="color: #0f6e6e; margin-top: 0;">📞 Contact & Directions</h3>
+    <a href="{{ '/contact/' | relative_url }}" class="card">
+      <h3>📞 Contact & Directions</h3>
       <p>Find us on the map, get directions, and book your appointment or emergency consultation with us.</p>
-      <strong style="color: #1d6fbf;">Contact Us →</strong>
+      <strong class="text-accent">Contact Us →</strong>
     </a>
   </div>
 </section>
 
 <section>
   <h2>Quick Contact</h2>
-  <div style="max-width: 640px; margin: 0 auto; text-align: center;">
-    <div class="card" style="margin-bottom: 1.5rem;">
+  <div class="card-stack text-center">
+    <div class="card">
       <h3>📍 Our Location</h3>
       <p>
         {{ site.clinic.address.street }}<br>
@@ -91,16 +91,16 @@ permalink: /
       </p>
     </div>
     
-    <div class="card" style="margin-bottom: 1.5rem;">
+    <div class="card">
       <h3>🕐 Hours</h3>
       <p>{{ site.clinic.hours }}</p>
     </div>
     
-    <p style="margin-top: 2rem;">
-      <a href="tel:{{ site.clinic.phone }}" class="btn btn-primary" style="margin: 0.5rem;">
+    <p class="btn-group">
+      <a href="tel:{{ site.clinic.phone }}" class="btn btn-primary">
         Call: {{ site.clinic.phone }}
       </a>
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary" style="margin: 0.5rem;">
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
         Book Appointment
       </a>
     </p>

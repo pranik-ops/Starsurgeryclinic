@@ -14,7 +14,7 @@ description: Eye conditions diagnosed and managed by Star Eye Center, including 
   <div class="card-grid">
     {% for condition in site.conditions %}
       <div class="card">
-        <h3><a href="{{ condition.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ condition.title }}</a></h3>
+        <h3><a href="{{ condition.url | relative_url }}" class="card-link">{{ condition.title }}</a></h3>
         {% if condition.short_answer %}
           <p>{{ condition.short_answer }}</p>
         {% endif %}

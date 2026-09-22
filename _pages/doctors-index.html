@@ -14,12 +14,12 @@ description: Board-certified ophthalmologists and medical professionals speciali
   <div class="card-grid">
     {% for doctor in site.doctors %}
       <div class="card">
-        <h3><a href="{{ doctor.url | relative_url }}" style="text-decoration: none; color: inherit;">{{ doctor.title }}</a></h3>
+        <h3><a href="{{ doctor.url | relative_url }}" class="card-link">{{ doctor.title }}</a></h3>
         {% if doctor.credentials %}
           <p><strong>{{ doctor.credentials }}</strong></p>
         {% endif %}
         {% if doctor.specialties %}
-          <div style="margin-top: 1rem;">
+          <div class="doctor-specialties">
             <strong>Specialties:</strong>
             <div class="badges">
               {% for specialty in doctor.specialties %}
@@ -29,7 +29,7 @@ description: Board-certified ophthalmologists and medical professionals speciali
           </div>
         {% endif %}
         {% if doctor.years_experience %}
-          <p style="font-size: 0.9rem; color: #5a6b6b; margin-top: 1rem;">
+          <p class="card-meta">
             {{ doctor.years_experience }} years of experience
           </p>
         {% endif %}
