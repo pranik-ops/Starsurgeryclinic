@@ -1,9 +1,18 @@
 ---
 ---
+# General crawling rules
 User-agent: *
 Allow: /
+Disallow: /.claude/
+Disallow: /Claude\ outputs/
+Disallow: /resources/
 
-# Explicitly welcome AI answer-engine crawlers (GEO)
+# Crawl rate optimization (Phase 1.1)
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Explicitly welcome AI indexing crawlers
+# These can index content (cite in responses) but not use for training
 User-agent: GPTBot
 Allow: /
 
@@ -16,4 +25,15 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Prevent AI training crawlers from using for training
+# Allow indexing for citations, disallow for training datasets
+User-agent: CCBot
+Allow: /
+Disallow: /?training=*
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /?training=*
+
+# Sitemap location for search engines
 Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
