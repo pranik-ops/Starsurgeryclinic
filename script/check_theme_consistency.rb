@@ -15,6 +15,9 @@ CSS_FILE = File.join(ROOT, "assets/css/clinic.css")
 
 EXCLUDED_DIRS = %w[_site vendor node_modules .claude .git resources].freeze
 EXCLUDED_TOP_LEVEL = ["Claude outputs"].freeze
+# Markdown files that are documentation about the site, not site content —
+# mirrors _config.yml's own `exclude:` list (Jekyll never builds these).
+EXCLUDED_FILES = Set["README.md"].freeze
 
 # Classes that intentionally carry no CSS rules of their own — they're page-type
 # markers (useful for readability, future hooks, or QA) layered onto a shared
@@ -30,7 +33,7 @@ def target_files
   Dir.glob(File.join(ROOT, "**/*.{html,md}")).reject do |path|
     relative = path.sub("#{ROOT}/", "").sub("#{ROOT}\\", "")
     parts = relative.split(/[\/\\]/)
-    (parts & EXCLUDED_DIRS).any? || (parts & EXCLUDED_TOP_LEVEL).any?
+    (parts & EXCLUDED_DIRS).any? || (parts & EXCLUDED_TOP_LEVEL).any? || EXCLUDED_FILES.include?(parts.last)
   end
 end
 

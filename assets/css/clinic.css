@@ -142,18 +142,48 @@ nav.main-nav a[aria-current="page"] {
 
 /* Emergency banner (shown site-wide, directly under the header) */
 .emergency-banner {
-  background: #fdecea;
-  color: var(--danger-dark);
+  background: linear-gradient(90deg, var(--danger) 0%, var(--danger-dark) 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.95rem;
   text-align: center;
-  padding: 0.65rem 1.25rem;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #f3c6c2;
 }
 
-.emergency-banner a {
-  color: var(--danger-dark);
-  font-weight: 700;
-  text-decoration: underline;
+.emergency-banner-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.emergency-banner-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  animation: emergency-pulse 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emergency-banner-icon {
+    animation: none;
+  }
+}
+
+@keyframes emergency-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.emergency-banner-actions {
+  display: inline-flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Hero */
@@ -261,6 +291,12 @@ nav.main-nav a[aria-current="page"] {
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-sm {
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: none;
 }
 
 /* Stats bar */

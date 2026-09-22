@@ -1,6 +1,10 @@
 <div class="emergency-banner" role="alert">
-  <strong>Eye injury or sudden vision loss?</strong>
-  Our trauma center is open 24/7 —
-  <a href="tel:{{ site.clinic.emergency_phone }}">call {{ site.clinic.emergency_phone }}</a>
-  now.
+  <span class="emergency-banner-text">
+    <span class="emergency-banner-icon" aria-hidden="true">🚨</span>
+    <strong>Eye injury or sudden vision loss?</strong> Our trauma center is open 24/7.
+  </span>
+  <span class="emergency-banner-actions">
+    <a class="btn btn-outline btn-sm" href="tel:{{ site.clinic.emergency_phone }}">📞 Call {{ site.clinic.emergency_phone }}</a>
+    <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&query={{ site.clinic.geo.latitude }},{{ site.clinic.geo.longitude }}" target="_blank" rel="noopener">📍 Get Directions</a>
+  </span>
 </div>
